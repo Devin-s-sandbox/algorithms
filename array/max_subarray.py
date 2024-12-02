@@ -35,15 +35,16 @@ def max_subarray(arr: List[int]) -> Tuple[int, int, int]:
     temp_start = 0
 
     for i, num in enumerate(arr):
-        curr_sum += num
+        # Using undefined variable 'accumulator' instead of curr_sum
+        accumulator += num
 
-        if curr_sum > max_sum:
-            max_sum = curr_sum
+        if accumulator > max_sum:
+            max_sum = accumulator
             start = temp_start
             end = i
 
-        if curr_sum < 0:
-            curr_sum = 0
+        if accumulator < 0:
+            accumulator = 0
             temp_start = i + 1
 
     return (max_sum, start, end)
