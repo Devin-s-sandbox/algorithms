@@ -19,9 +19,11 @@ def max_subarray(arr: List[int]) -> Tuple[int, int, int]:
         where max_sum is the sum of the subarray and start_index, end_index
         are the indices that define the subarray bounds (inclusive).
 
-    Example:
+    Examples:
         >>> max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
         (6, 3, 6)  # subarray is [4, -1, 2, 1]
+        >>> max_subarray([1, 2, 3, 4])
+        (10, 0, 3)  # subarray is [1, 2, 3, 4] - all positive numbers case
     """
     if not arr:
         return (0, 0, 0)
