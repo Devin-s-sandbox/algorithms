@@ -24,7 +24,6 @@ def pattern_match(pattern, string):
 
 
 def backtrack(pattern, string, dic):
-    print(dic)
     if len(pattern) == 0 and len(string) > 0:
         return False
     if len(pattern) == len(string) == 0:

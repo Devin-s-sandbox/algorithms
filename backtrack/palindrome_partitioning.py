@@ -25,7 +25,7 @@ values, adding the initial substring to each item before adding it to the result
 
 # A slightly more Pythonic approach would be to make a recursive generator:
 
-def palindromic_substrings(s):
+def palindromic_substrings_generator(s):
     if not s:
         yield []
         return

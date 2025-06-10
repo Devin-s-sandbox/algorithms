@@ -38,24 +38,14 @@ def backtrack(res, nums, stack, pos):
         backtrack(res, nums, stack, pos + 1)
 
 
-# simplified backtrack
-
-# def backtrack(res, nums, cur, pos):
-# if pos >= len(nums):
-# res.append(cur)
-# else:
-# backtrack(res, nums, cur+[nums[pos]], pos+1)
-# backtrack(res, nums, cur, pos+1)
-
-
-# Iteratively
-def subsets2(self, nums):
+def subsets_iterative(nums):
     res = [[]]
     for num in sorted(nums):
         res += [item + [num] for item in res]
     return res
 
 
-test = [1, 2, 3]
-print(test)
-print(subsets(test))
+if __name__ == "__main__":
+    test = [1, 2, 3]
+    print(test)
+    print(subsets(test))

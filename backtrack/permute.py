@@ -17,25 +17,12 @@ def permute(nums):
         new_perms = []
         for perm in perms:
             for i in range(len(perm) + 1):
-                new_perms.append(perm[:i] + [n] + perm[i:])  ###insert n
-                print(i, perm[:i], [n], perm[i:], ">>>>", new_perms)
+                new_perms.append(perm[:i] + [n] + perm[i:])
         perms = new_perms
     return perms
 
 
-# DFS Version
-# def permute(nums):
-# res = []
-# dfs(res, nums, [])
-# return res
-
-# def dfs(res, nums, path):
-# if not nums:
-# res.append(path)
-# for i in range(len(nums)):
-# print(nums[:i]+nums[i+1:])
-# dfs(res, nums[:i]+nums[i+1:], path+[nums[i]])
-
-test = [1, 2, 3]
-print(test)
-print(permute(test))
+if __name__ == "__main__":
+    test = [1, 2, 3]
+    print(test)
+    print(permute(test))

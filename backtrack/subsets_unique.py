@@ -16,24 +16,25 @@
 # ]
 
 def subsets_unique(nums):
-    res = set()
+    res = []
+    nums.sort()
     backtrack(res, nums, [], 0)
-    return list(res)
+    return res
 
 
 def backtrack(res, nums, stack, pos):
-    if pos == len(nums):
-        res.add(tuple(stack))
-    else:
-        # take
-        stack.append(nums[pos])
-        backtrack(res, nums, stack, pos + 1)
+    res.append(list(stack))
+    
+    for i in range(pos, len(nums)):
+        if i > pos and nums[i] == nums[i-1]:
+            continue
+        
+        stack.append(nums[i])
+        backtrack(res, nums, stack, i + 1)
         stack.pop()
 
-        # don't take
-        backtrack(res, nums, stack, pos + 1)
 
-
-test = [1, 2, 2]
-print(test)
-print(subsets_unique(test))
+if __name__ == "__main__":
+    test = [1, 2, 2]
+    print(test)
+    print(subsets_unique(test))
