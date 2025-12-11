@@ -1,5 +1,7 @@
 # Data Structure and Algorithmic Problems solved in many languages
 
+<!-- Dummy change for testing -->
+
 [![Join the chat at https://gitter.im/marcosfede/algorithms](https://badges.gitter.im/marcosfede/algorithms.svg)](https://gitter.im/marcosfede/algorithms?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
